@@ -1,0 +1,64 @@
+﻿@model IEnumerable<facebook1.Models.friendserch>
+@{
+    ViewBag.Title = "Homepage";
+}
+<h2></h2>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="../../content/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <!--<link href="../../Content/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />!-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../../Content/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+
+    <script src="~/content/script/UnFriend.js"></script>
+
+    <script src="~/content/script/searchOP2.js"></script>
+    <!-- <script src="../../Scripts/JScript2.js" type="text/javascript"></script>
+
+     <script language="javascript" type="text/javascript">
+
+
+         function search_onclick() {
+
+         }
+     </script>!-->
+
+
+</head>
+<body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12" style="background-color:#3b5998; height:60px;">
+
+
+                    <input type="text" id="txtsearch" name="X_firstname" style="width:200px; margin-left:70px; height:20px; margin-top:10px;" class="form-control " placeholder="Search Facebook"  />@{Html.TextBox("X_firstname");} <input type="button" value="search" id="search" name="cmd1" />
+
+                    <!--<button type="button" class="btn btn-default" style="margin-left:50px; margin-top:5px; width:150px;">!-->
+                    <!--<input type ="text" placeholder="Search Facebook" /><span class="glyphicon glyphicon-search"></span>!-->
+                    <img src="@ViewData["profilepic"]" style="margin-left:400px; margin-top:5px; width:50px;" /><input type="hidden" value="@ViewData["mainloginid"]" id="X_mainloginid" />
+                   <font color="white"> @ViewData["firstname"]@ViewData["lastname"]</font>
+                    <input type="button" value="Logout" />
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4" style="background-color:Silver;width:200px;height:600px;"><img src="@ViewData["profilepic"]" style="width:50px;" /><label style="margin-top:-40px; margin-left:55px;"> @ViewData["firstname"]@ViewData["lastname"] </label><br />Edit profile<br />
+                <a href="#" id="aprvfrnd" class="frnd">ApproveFriend</a><br />
+                <a href="#"id="frndsrch">Search friend</a></div>
+                <div class="col-md-7" style="background-color:Silver; width:450px;">
+                    <pre id="hide"><a href="#">Update Status</a>&nbsp;&nbsp;&nbsp;&nbsp;  <a href="#">Add photos/video</a>&nbsp;&nbsp;&nbsp;&nbsp;  <a href="#">Writenotes</a><br />
+                    <img src="@ViewData["profilepic"]" style="width:50px; margin-left:-110px;" /><label style="margin-top:-40px; margin-left:80px;"> What's in your mind?</label> </pre><br />
+                        <div class="friend" style="background-color:white;">
+                      </div></div>
+                <div class="col-md-1" style="background-color:Silver; height:600px; width:420px;"><pre style="width:400px;">Your adds<div style="background-color:Blue;width:300px;height:475px; margin-left:50px;"></pre></div>
+            </div>
+        </div>
+  
+</body>
+</html>
